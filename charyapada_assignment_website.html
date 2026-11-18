@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>চর্যাপদে প্রতিফলিত সমাজচিত্র — বাংলা অ্যাসাইনমেন্ট</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+:root{--bg:#1b100b;--panel:#2a190f;--panel2:#321f13;--gold:#d9a66d;--gold2:#f0c895;--ink:#f2e4d2;--muted:#c7ad91;--line:#6b4930}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#3a2416 0,#1b100b 58%);color:var(--ink);font-family:'Noto Serif Bengali',serif;line-height:1.85}
+header{position:sticky;top:0;z-index:5;background:#21140eeF;border-bottom:1px solid #65452d;backdrop-filter:blur(12px);padding:12px 16px}
+.brand{max-width:1100px;margin:auto;text-align:center;color:var(--gold2);font-weight:700;font-size:18px}
+nav{max-width:1100px;margin:10px auto 0;display:flex;gap:8px;overflow-x:auto;padding-bottom:3px}
+nav a,.action{white-space:nowrap;text-decoration:none;color:#f4dfc5;background:#3a281b;border:1px solid #5d412b;border-radius:24px;padding:7px 13px;font:500 13px 'Noto Sans Bengali',sans-serif}
+nav a.active,nav a:hover,.action:hover{background:var(--gold);color:#24150c}
+main{max-width:1000px;margin:24px auto;padding:0 16px}
+section{background:linear-gradient(145deg,#2c1b11,#24160e);border:1px solid #65452d;border-radius:14px;padding:clamp(20px,4vw,42px);margin:20px 0;box-shadow:0 12px 32px #0004;scroll-margin-top:130px}
+.cover{min-height:720px;display:flex;flex-direction:column;justify-content:center;text-align:center;border:2px solid var(--gold);outline:1px solid #9b7048;outline-offset:-10px;padding:50px 8%}
+.kicker{color:var(--gold);letter-spacing:2px;font:600 13px 'Noto Sans Bengali',sans-serif}
+h1{font-size:clamp(25px,5vw,42px);line-height:1.5;color:var(--gold2);margin:16px 0 28px}
+h2{font-size:clamp(21px,3vw,29px);color:var(--gold2);border-bottom:2px solid var(--gold);display:inline-block;padding-bottom:7px;margin:0 0 22px}
+h3{color:var(--gold2);font-size:19px;margin:28px 0 8px}
+p{margin:10px 0 16px;text-align:justify}
+.meta{margin:32px auto 0;max-width:650px;text-align:left}
+.meta div{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;border-bottom:1px solid #60432d;padding:10px 4px}
+.meta b{color:var(--gold);font:600 12px 'Noto Sans Bengali',sans-serif}
+.meta span{font-size:15px}
+.question{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:20px 10px;margin-top:30px;font-size:20px;color:#f3d4ad}
+.toc{list-style:none;padding:0;counter-reset:item}.toc li{counter-increment:item;border-bottom:1px solid #523722;padding:10px 4px}.toc li:before{content:counter(item, bengali) "। ";color:var(--gold);font-weight:700}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--gold2)}
+.note{background:#3a281b;border-left:4px solid var(--gold);padding:14px 18px;border-radius:6px;color:#f0d9bd}
+.quote{color:#f2c995;text-align:center;font-size:18px;padding:14px;border-left:2px solid var(--gold);border-right:2px solid var(--gold);margin:18px 4%}
+footer{text-align:center;color:var(--muted);font:13px 'Noto Sans Bengali',sans-serif;padding:25px 12px 45px}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px auto}
+.action{cursor:pointer;padding:10px 16px;font-size:14px}
+.small{font-size:14px;color:var(--muted)}
+@media(max-width:600px){.cover{min-height:650px}.meta div{grid-template-columns:1fr;gap:2px}.meta span{padding-left:5px}section{padding:22px 18px}}
+@media print{
+ @page{size:A4;margin:18mm 17mm}
+ body{background:white;color:#17110c;font-size:11.5pt;line-height:1.7}
+ header,.actions{display:none!important}
+ main{max-width:none;margin:0;padding:0}
+ section{background:white;color:#17110c;border:0;box-shadow:none;border-radius:0;margin:0;padding:0;break-after:page;page-break-after:always}
+ section:last-of-type{break-after:auto;page-break-after:auto}
+ .cover{min-height:255mm;border:2px solid #8b6038;outline:1px solid #8b6038;outline-offset:-9px;padding:20mm 12mm}
+ h1,h2,h3,.kicker,.meta b,.quote{color:#57351c}
+ h2{border-color:#9a7047}
+ p{orphans:3;widows:3}
+ .meta div{border-color:#c9b49c}
+ .meta span,.toc a{color:#17110c}
+ .note{background:#f6efe7;color:#17110c;border-color:#9a7047}
+ .quote{border-color:#9a7047}
+ footer{color:#555;break-before:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">বাংলা অ্যাসাইনমেন্ট · চর্যাপদ</div>
+ <nav id="nav">
+  <a href="#cover" class="active">প্রচ্ছদ</a><a href="#index">সূচিপত্র</a><a href="#ack">কৃতজ্ঞতা</a><a href="#intro">ভূমিকা</a><a href="#discussion">মূল আলোচনা</a><a href="#history">ঐতিহাসিক মূল্য</a><a href="#literary">সাহিত্যিক মূল্য</a><a href="#conclusion">উপসংহার</a><a href="#bibliography">গ্রন্থপঞ্জি</a>
+ </nav>
+</header>
+<main>
+<section id="cover" class="cover">
+ <div class="kicker">GOBARDANGA HINDU COLLEGE</div>
+ <h1>চর্যাপদে প্রতিফলিত সমাজচিত্রের বর্ণনা দিয়ে তার ঐতিহাসিক ও সাহিত্যিক মূল্য নিরূপণ করো</h1>
+ <div class="kicker">B.A. SEMESTER – I · 2026 (NEP)</div>
+ <div class="meta">
+  <div><b>বিভাগ / বিষয়</b><span>বাংলা (BENGALI)</span></div>
+  <div><b>কোর্স</b><span>MDP (General / Minor)</span></div>
+  <div><b>শিক্ষার্থীর নাম</b><span>সুদীপ্ত বিশ্বাস (Sudipta Biswas)</span></div>
+  <div><b>কলেজ রোল নম্বর</b><span>........................................</span></div>
+  <div><b>রেজিস্ট্রেশন নম্বর</b><span>........................................</span></div>
+  <div><b>পূর্ণমান</b><span>২০</span></div>
+  <div><b>জমা দেওয়ার তারিখ</b><span>২৩/১১/২০২৬ · সকাল ১১টা · রুম ১৬৪</span></div>
+ </div>
+ <div class="question">প্রকল্প / অ্যাসাইনমেন্ট</div>
+</section>
+
+<section id="index">
+ <h2>সূচিপত্র (Index)</h2>
+ <ol class="toc">
+  <li><a href="#ack">কৃতজ্ঞতা স্বীকার</a></li>
+  <li><a href="#intro">ভূমিকা</a></li>
+  <li><a href="#discussion">চর্যাপদে প্রতিফলিত সমাজচিত্র</a></li>
+  <li><a href="#history">চর্যাপদের ঐতিহাসিক মূল্য</a></li>
+  <li><a href="#literary">চর্যাপদের সাহিত্যিক মূল্য</a></li>
+  <li><a href="#language">ভাষা ও রচনাশৈলী</a></li>
+  <li><a href="#conclusion">উপসংহার</a></li>
+  <li><a href="#bibliography">গ্রন্থপঞ্জি</a></li>
+ </ol>
+</section>
+
+<section id="ack">
+ <h2>কৃতজ্ঞতা স্বীকার</h2>
+ <p>এই অ্যাসাইনমেন্টটি সম্পন্ন করার জন্য আমি প্রথমেই আমার বাংলা বিভাগের শিক্ষক-শিক্ষিকাদের প্রতি আন্তরিক কৃতজ্ঞতা জানাই। তাঁদের নির্দেশনা, পরামর্শ ও উৎসাহ এই কাজটি প্রস্তুত করতে আমাকে সাহায্য করেছে।</p>
+ <p>এছাড়াও পাঠ্যপুস্তক ও বাংলা সাহিত্যের ইতিহাসবিষয়ক বিভিন্ন গ্রন্থ থেকে প্রয়োজনীয় তথ্য সংগ্রহ করেছি। যাঁদের লেখা ও আলোচনা এই কাজকে সমৃদ্ধ করেছে, তাঁদের সকলের প্রতি আমি কৃতজ্ঞ।</p>
+ <p>পরিশেষে, এই অ্যাসাইনমেন্টের মাধ্যমে চর্যাপদের সমাজচিত্র, ঐতিহাসিক গুরুত্ব এবং সাহিত্যিক মূল্য সম্পর্কে আরও গভীরভাবে জানার সুযোগ পেয়েছি।</p>
+ <div class="meta"><div><b>শিক্ষার্থীর স্বাক্ষর</b><span>........................................</span></div><div><b>শিক্ষকের স্বাক্ষর</b><span>........................................</span></div></div>
+</section>
+
+<section id="intro">
+ <h2>১. ভূমিকা</h2>
+ <p>বাংলা ভাষা ও সাহিত্যের ইতিহাসে চর্যাপদ একটি অমূল্য সম্পদ। চর্যাপদ বাংলা ভাষার প্রাচীনতম প্রাপ্ত সাহিত্যিক নিদর্শন হিসেবে স্বীকৃত। আনুমানিক দশম থেকে দ্বাদশ শতাব্দীর মধ্যে বৌদ্ধ সহজিয়া সিদ্ধাচার্যরা এই পদগুলি রচনা করেছিলেন। ১৯০৭ সালে মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী নেপালের রাজদরবারের গ্রন্থাগার থেকে চর্যাপদের পুঁথি আবিষ্কার করেন। পরবর্তীকালে ১৯১৬ সালে তাঁর সম্পাদনায় ‘হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধ গান ও দোহা’ গ্রন্থে এটি প্রকাশিত হয়।</p>
+ <p>চর্যাপদের পদগুলিতে ধর্মীয় সাধনার পাশাপাশি তৎকালীন সমাজ, মানুষের জীবনযাত্রা, পেশা, অর্থনীতি, সংস্কৃতি ও সামাজিক অবস্থার পরিচয় পাওয়া যায়। তাই চর্যাপদ শুধু ধর্মীয় সাহিত্য নয়, প্রাচীন বাংলার সমাজজীবন জানারও একটি গুরুত্বপূর্ণ ঐতিহাসিক উপাদান।</p>
+</section>
+
+<section id="discussion">
+ <h2>২. চর্যাপদে প্রতিফলিত সমাজচিত্র</h2>
+ <p>চর্যাপদের পদগুলিতে তৎকালীন সমাজের বিভিন্ন দিকের পরিচয় পাওয়া যায়। এর মধ্যে উল্লেখযোগ্য কয়েকটি দিক নিচে আলোচনা করা হলো।</p>
+ <h3>ক) সামাজিক জীবন</h3><p>চর্যাপদে তৎকালীন সমাজের সাধারণ মানুষের জীবনযাত্রার পরিচয় পাওয়া যায়। সমাজে ধনী-দরিদ্রের পার্থক্য, উচ্চ-নীচ শ্রেণির বিভাজন এবং বিভিন্ন পেশার মানুষের অস্তিত্বের ইঙ্গিত রয়েছে। সাধারণ মানুষের সুখ-দুঃখ, অভাব-অনটন ও দৈনন্দিন জীবনও পদগুলিতে প্রতিফলিত হয়েছে।</p>
+ <h3>খ) অর্থনৈতিক জীবন</h3><p>চর্যাপদে তৎকালীন অর্থনৈতিক জীবনের বিভিন্ন চিত্র পাওয়া যায়। কৃষিকাজ, পশুপালন, মাছ ধরা, নৌকা চালানো এবং ব্যবসা-বাণিজ্যের উল্লেখ থেকে বোঝা যায় যে কৃষি ও নদীকেন্দ্রিক জীবিকা সমাজের অন্যতম ভিত্তি ছিল।</p>
+ <h3>গ) পেশাগত জীবন</h3><p>চর্যাপদে বিভিন্ন পেশার মানুষের পরিচয় পাওয়া যায়। যেমন—কৃষক, জেলে, তাঁতি, শিকারি, মাঝি, ডোম ও কুমোর। এইসব পেশার উল্লেখ থেকে তৎকালীন সমাজের শ্রমজীবী মানুষের জীবন ও জীবিকার পরিচয় পাওয়া যায়।</p>
+ <h3>ঘ) নারীর অবস্থান</h3><p>চর্যাপদে নারীর জীবন ও সামাজিক অবস্থানের কিছু পরিচয় পাওয়া যায়। পদগুলিতে শবরী ও ডোম্বীর মতো নারীর উল্লেখ রয়েছে। এর মাধ্যমে সমাজের বিভিন্ন স্তরের নারীদের জীবনযাত্রা, শ্রম ও সামাজিক অবস্থার আভাস মেলে। বিশেষ করে প্রান্তিক জনগোষ্ঠীর নারীদের উপস্থিতি চর্যাপদের সমাজচিত্রকে বৈচিত্র্যময় করেছে।</p>
+ <h3>ঙ) ধর্মীয় জীবন</h3><p>চর্যাপদ মূলত বৌদ্ধ সহজিয়া সাধকদের রচিত ধর্মসাধনামূলক গান। এতে সহজযান ও বজ্রযান বৌদ্ধধর্মের প্রভাব লক্ষ করা যায়। সাধকরা গুরুর গুরুত্ব, দেহসাধনা, আত্মোপলব্ধি এবং আধ্যাত্মিক মুক্তির কথা বলেছেন। এর মাধ্যমে তৎকালীন ধর্মীয় বিশ্বাস ও সাধনাপদ্ধতির পরিচয় পাওয়া যায়।</p>
+ <h3>চ) খাদ্যাভ্যাস ও পোশাক-পরিচ্ছদ</h3><p>চর্যাপদের বিভিন্ন পদে তৎকালীন মানুষের খাদ্যাভ্যাস ও পোশাক-পরিচ্ছদের কিছু পরিচয় পাওয়া যায়। ভাত, মাছ এবং সাধারণ খাদ্যদ্রব্যের উল্লেখ থেকে বাঙালির খাদ্যসংস্কৃতির আভাস মেলে। সাধারণ মানুষের জীবনযাত্রা ছিল অনেকটাই প্রকৃতিনির্ভর।</p>
+ <h3>ছ) নদী ও নৌকাকেন্দ্রিক জীবন</h3><p>প্রাচীন বাংলার ভৌগোলিক পরিবেশ ছিল নদীনির্ভর। চর্যাপদে নৌকা, মাঝি, নদী ও জলপথের বিভিন্ন চিত্র পাওয়া যায়। এর মাধ্যমে বোঝা যায়, যাতায়াত, জীবিকা ও যোগাযোগের ক্ষেত্রে নদীর গুরুত্বপূর্ণ ভূমিকা ছিল।</p>
+ <h3>জ) প্রান্তিক জনগোষ্ঠীর জীবন</h3><p>চর্যাপদে শবর, ডোম ও ডোম্বী প্রভৃতি প্রান্তিক জনগোষ্ঠীর উল্লেখ পাওয়া যায়। তাঁদের জীবনযাত্রা, পেশা ও সামাজিক অবস্থানের পরিচয় পদগুলিতে ফুটে উঠেছে। ফলে তৎকালীন সমাজের সাধারণ ও প্রান্তিক মানুষের জীবন সম্পর্কেও ধারণা পাওয়া যায়।</p>
+ <h3>ঝ) প্রকৃতি ও পরিবেশ</h3><p>চর্যাপদে বন, পাহাড়, নদী, পশুপাখি এবং গ্রামীণ পরিবেশের চিত্র রয়েছে। প্রকৃতির সঙ্গে মানুষের ঘনিষ্ঠ সম্পর্ক ছিল। তৎকালীন বাংলার প্রাকৃতিক পরিবেশ ও গ্রামীণ জীবনের পরিচয় চর্যাপদের মাধ্যমে পাওয়া যায়।</p>
+</section>
+
+<section id="history">
+ <h2>৩. চর্যাপদের ঐতিহাসিক মূল্য</h2>
+ <p>বাংলার ইতিহাস ও সমাজজীবন সম্পর্কে জানতে চর্যাপদের গুরুত্ব অপরিসীম। এর ঐতিহাসিক মূল্যগুলি হলো—</p>
+ <h3>প্রাচীন বাংলার সমাজের পরিচয়</h3><p>চর্যাপদ থেকে তৎকালীন সমাজের শ্রেণিবিভাগ, পেশা, সামাজিক রীতিনীতি ও মানুষের জীবনযাত্রা সম্পর্কে জানা যায়।</p>
+ <h3>অর্থনৈতিক ইতিহাসের উপাদান</h3><p>কৃষিকাজ, মাছ ধরা, পশুপালন, ব্যবসা-বাণিজ্য ও নৌচলাচলের পরিচয় পাওয়া যায়।</p>
+ <h3>ধর্মীয় ইতিহাসের উপাদান</h3><p>বৌদ্ধ সহজিয়া ধর্ম, বজ্রযান এবং তৎকালীন ধর্মীয় সাধনাপদ্ধতি সম্পর্কে ধারণা পাওয়া যায়।</p>
+ <h3>নারীর সামাজিক অবস্থান</h3><p>বিভিন্ন শ্রেণির নারীর উল্লেখ থেকে তৎকালীন সমাজে নারীর অবস্থান ও ভূমিকা সম্পর্কে কিছু ধারণা পাওয়া যায়।</p>
+ <h3>ভৌগোলিক পরিচয়</h3><p>নদী, বন, পাহাড় ও গ্রামীণ পরিবেশের বর্ণনা থেকে প্রাচীন বাংলার প্রাকৃতিক পরিবেশ সম্পর্কে জানা যায়।</p>
+ <h3>লোকসংস্কৃতির পরিচয়</h3><p>সাধারণ মানুষের জীবনযাত্রা, লোকাচার, পেশা ও দৈনন্দিন অভিজ্ঞতার পরিচয় চর্যাপদে ফুটে উঠেছে।</p>
+ <div class="note">তাই চর্যাপদকে প্রাচীন বাংলার সমাজ ও সংস্কৃতির একটি মূল্যবান ঐতিহাসিক উপাদান বলা যায়। তবে মনে রাখতে হবে, চর্যাপদ মূলত ধর্মসাধনার পদ; তাই এর সমাজচিত্র প্রত্যক্ষ ইতিহাসের বিবরণ নয়, বরং সাহিত্যিক ইঙ্গিতের মাধ্যমে পাওয়া ঐতিহাসিক উপাদান।</div>
+</section>
+
+<section id="literary">
+ <h2>৪. চর্যাপদের সাহিত্যিক মূল্য</h2>
+ <p>বাংলা সাহিত্যের ইতিহাসে চর্যাপদের সাহিত্যিক গুরুত্ব অত্যন্ত বেশি।</p>
+ <h3>বাংলা সাহিত্যের প্রাচীনতম নিদর্শন</h3><p>চর্যাপদ বাংলা সাহিত্যের প্রাচীনতম প্রাপ্ত নিদর্শন হিসেবে স্বীকৃত।</p>
+ <h3>ভাষার প্রাচীন রূপ</h3><p>চর্যাপদের ভাষায় প্রাচীন বাংলা ভাষার বৈশিষ্ট্য প্রকাশিত হয়েছে। বাংলা ভাষার বিবর্তনের ইতিহাস জানতে এটি বিশেষ গুরুত্বপূর্ণ।</p>
+ <h3>কাব্যিক সৌন্দর্য</h3><p>পদগুলিতে রূপক, উপমা, প্রতীক ও চিত্রকল্পের ব্যবহার লক্ষ করা যায়। এর ফলে পদগুলি সাহিত্যিক সৌন্দর্যে সমৃদ্ধ হয়েছে।</p>
+ <h3>সন্ধ্যাভাষার ব্যবহার</h3><p>চর্যাপদের ভাষা অনেকাংশে রহস্যময় ও প্রতীকধর্মী। এই বিশেষ ভাষাকে সন্ধ্যাভাষা বলা হয়। এর মাধ্যমে সাধকরা ধর্মীয় ও আধ্যাত্মিক ভাব প্রকাশ করেছেন।</p>
+ <h3>লোকজীবনের প্রতিফলন</h3><p>সাধারণ মানুষের জীবন, পেশা, প্রকৃতি ও দৈনন্দিন অভিজ্ঞতার প্রকাশ ঘটেছে। ফলে বাংলা সাহিত্যে লোকজীবনের উপাদানের প্রাচীন পরিচয় পাওয়া যায়।</p>
+ <h3>সংগীতধর্মিতা</h3><p>চর্যাপদের পদগুলির সঙ্গে রাগ-রাগিণীর উল্লেখ রয়েছে। তাই এগুলির মধ্যে সংগীতের বৈশিষ্ট্যও লক্ষ করা যায়।</p>
+ <h3>পরবর্তী সাহিত্যের ভিত্তি</h3><p>বাংলা কাব্য ও গীতিকবিতার ধারার প্রাথমিক বিকাশ বুঝতে চর্যাপদ গুরুত্বপূর্ণ ভূমিকা পালন করে।</p>
+</section>
+
+<section id="language">
+ <h2>৫. চর্যাপদের ভাষা ও রচনাশৈলী</h2>
+ <p>চর্যাপদের ভাষা বাংলা ভাষার প্রাচীন রূপের পরিচয় বহন করে। এর ভাষায় বাংলা ছাড়াও অসমিয়া, ওড়িয়া ও মৈথিলি ভাষার প্রাচীন বৈশিষ্ট্যের সঙ্গে কিছু মিল পাওয়া যায়। চর্যাপদের ভাষা সহজ, সাবলীল ও প্রতীকধর্মী।</p>
+ <ul><li>সন্ধ্যাভাষার প্রয়োগ।</li><li>রূপক ও প্রতীকের ব্যবহার।</li><li>গ্রামবাংলার প্রকৃতি ও জীবনের চিত্র।</li><li>রাগ-রাগিণীর উল্লেখ।</li><li>আধ্যাত্মিক ভাব ও লোকজ উপাদানের সমন্বয়।</li></ul>
+</section>
+
+<section id="conclusion">
+ <h2>৬. উপসংহার</h2>
+ <p>পরিশেষে বলা যায়, চর্যাপদ বাংলা সাহিত্যের ইতিহাসে এক অমূল্য সম্পদ। এটি শুধু বাংলা ভাষার প্রাচীনতম সাহিত্যিক নিদর্শন নয়, প্রাচীন বাংলার সমাজ, সংস্কৃতি, অর্থনীতি, ধর্মীয় বিশ্বাস ও মানুষের জীবনযাত্রার পরিচয় বহনকারী একটি গুরুত্বপূর্ণ দলিল। চর্যাপদের মাধ্যমে আমরা একদিকে যেমন প্রাচীন বাংলার সমাজজীবন সম্পর্কে জানতে পারি, অন্যদিকে বাংলা ভাষা ও সাহিত্যের প্রাথমিক বিকাশ সম্পর্কেও ধারণা লাভ করি।</p>
+ <p>সুতরাং চর্যাপদের ঐতিহাসিক ও সাহিত্যিক মূল্য অপরিসীম। বাংলা ভাষা ও সাহিত্যের ইতিহাসে চর্যাপদের স্থান চিরস্মরণীয়।</p>
+</section>
+
+<section id="bibliography">
+ <h2>৭. গ্রন্থপঞ্জি</h2>
+ <ol><li>হরপ্রসাদ শাস্ত্রী — হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধ গান ও দোহা।</li><li>সুকুমার সেন — বাংলা সাহিত্যের ইতিহাস।</li><li>অসিতকুমার বন্দ্যোপাধ্যায় — বাংলা সাহিত্যের ইতিবৃত্ত।</li><li>বাংলা সাহিত্যের ইতিহাস বিষয়ক পাঠ্যপুস্তক।</li></ol>
+ <div class="note">জমা দেওয়ার আগে নিজের কলেজ রোল নম্বর ও রেজিস্ট্রেশন নম্বর পূরণ করে নেবে। কলেজের নির্দেশ অনুযায়ী অতিরিক্ত অলংকরণ বা চ্যানেল ফাইলের প্রয়োজন নেই।</div>
+</section>
+<div class="actions"><button class="action" onclick="window.print()">PDF Download / Print</button><button class="action" onclick="window.scrollTo({top:0,behavior:'smooth'})">উপরে যাও ↑</button></div>
+</main>
+<footer>Gobardanga Hindu College · B.A. Semester I · Bengali Assignment · 2026</footer>
+<script>
+const links=[...document.querySelectorAll('nav a')];
+const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-25% 0px -65% 0px'});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body></html>
